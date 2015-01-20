@@ -1,0 +1,21 @@
+{
+  "name": "i3s-db-utils",
+  "version": "0.0.2",
+  "description": "Utility package to help read and manipulate an I3S Classic database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/itsravenous/i3s-db-utils.git",
+  "keywords": [
+    "photo",
+    "ID",
+    "wildlife",
+    "I3S"
+  ],
+  "author": "Tom Jenkins <tom@itsravenous.com>",
+  "license": "GPLv2",
+  "dependencies": {
+    "i3s-fgp-reader": "0.0.4"
+  }
+}
