@@ -48,15 +48,28 @@ function getFingerprintsForAnimal(animalDir) {
  * @return {Array}
  */
 function getAllFingerprints(dir) {
-	var ids = fs.readdirSync(dir);
+	var ids = getAnimals();
 	var fgps = ids.map(function (id) {
 		return getFingerprintsForAnimal(path.join(dir, id));
 	}).filter(function (fgp) { return fgp; });
 	return fgps;
 }
 
+/**
+ * Fetches all individuals
+ * @param {String} DB dir
+ * @return {Array}
+ */
+function getAnimals(dir) {
+	var ids = fs.readdirSync(dir).filter(function (id) {
+		return fs.statSync(path.join(dir, id)).isDirectory();
+	});
+	return ids;
+}
+
 module.exports = {
 	getFGPImageName: getFGPImageName,
 	getFingerprintsForAnimal: getFingerprintsForAnimal,
-	getAllFingerprints: getAllFingerprints
+	getAllFingerprints: getAllFingerprints,
+	getAnimals: getAnimals
 }
