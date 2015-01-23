@@ -21,7 +21,7 @@ function getFGPImageName (fgpFile) {
  * @param {String} individual ID
  * @return {Array}
  */
-function getFingerprintsForIndividual(animalDir) {
+function getFingerprintsForAnimal(animalDir) {
 	if (!fs.existsSync(animalDir) || !fs.statSync(animalDir).isDirectory()) {
 		return false;
 	}
@@ -50,13 +50,13 @@ function getFingerprintsForIndividual(animalDir) {
 function getAllFingerprints(dir) {
 	var ids = fs.readdirSync(dir);
 	var fgps = ids.map(function (id) {
-		return getFingerprintsForIndividual(path.join(dir, id));
+		return getFingerprintsForAnimal(path.join(dir, id));
 	}).filter(function (fgp) { return fgp; });
 	return fgps;
 }
 
 module.exports = {
 	getFGPImageName: getFGPImageName,
-	getFingerprintsForIndividual: getFingerprintsForIndividual,
+	getFingerprintsForAnimal: getFingerprintsForAnimal,
 	getAllFingerprints: getAllFingerprints
 }
