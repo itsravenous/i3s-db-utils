@@ -35,6 +35,7 @@ function getFingerprintsForIndividual(animalDir) {
 		fgpFile = path.join(animalDir, fgpFile);
 		var fgpData = fgpReader(fgpFile);
 		fgps.push({
+			id: path.basename(fgpFile, '.fgp'),
 			fgp: fgpData,
 			img64: fs.readFileSync(getFGPImageName(fgpFile)).toString('base64')
 		});
