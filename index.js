@@ -37,7 +37,7 @@ function getFingerprintsForAnimal(animalDir) {
 		fgps.push({
 			id: path.basename(fgpFile, '.fgp'),
 			fgp: fgpData,
-			img64: fs.readFileSync(getFGPImageName(fgpFile)).toString('base64')
+			img64: '#' // fs.readFileSync(getFGPImageName(fgpFile)).toString('base64')
 		});
 	});
 	return fgps;

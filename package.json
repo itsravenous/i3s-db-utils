@@ -1,6 +1,6 @@
 {
   "name": "i3s-db-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Utility package to help read and manipulate an I3S Classic database",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,6 @@
   "author": "Tom Jenkins <tom@itsravenous.com>",
   "license": "GPLv2",
   "dependencies": {
-    "i3s-fgp-reader": "0.0.4"
+    "i3s-fgp-reader": "0.1.1"
   }
 }
