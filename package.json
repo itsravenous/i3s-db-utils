@@ -1,6 +1,6 @@
 {
   "name": "i3s-db-utils",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Utility package to help read and manipulate an I3S Classic database",
   "main": "index.js",
   "scripts": {
