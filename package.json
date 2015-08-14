@@ -16,6 +16,6 @@
   "author": "Tom Jenkins <tom@itsravenous.com>",
   "license": "GPLv2",
   "dependencies": {
-    "i3s-fgp-reader": "0.1.1"
+    "i3s-fgp-reader": "^0.2.2"
   }
 }
